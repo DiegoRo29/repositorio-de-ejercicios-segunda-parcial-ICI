@@ -1,0 +1,153 @@
+https://www.dartpad.dev/: pagina compiladora de dart
+Instalar flutter: https://docs.flutter.dev/get-started/install.
+Dart es un lenguaje compilado y orientado a objetos
+Dart es muy parecido a lenguaje c, para imprimir pantalla se requiere
+de la funcion print,
+*Para comentar variables: //
+Una vez que yo creo una variable, conservara su tipo de dato siempre, por
+lo que el tipado de dart es explicito y estático
+*Las variables se declaran iniciando en minuscula
+*double: variables flotantes
+*num: tipo de dato numerico
+*string: datos de tipo cadena
+*dynamic: puedes agregar cualquier tipo de dato posteriormente
+*bool: palabra reservada de booleano
+* Las constantes se pueden declarar de forma exlpicita, ejemplo:
+const double miPI= 3.1416;
+prnt(miPI);
+
+miPI = 2.5;
+*Const: declara su valor en un principio // tiempo de compilacion
+*Final: se puede declarar un valor cuando esta en ejecución el programa
+*Para conocer el tipo de dato de una variable se usa runtimeType, ejemplo:
+num miNumero;
+num miNumero = 3.1416;
+print(miNumero.runtimeType);
+// delacarion con var (Inferencia de tipo)
+si no se que tipo es o no se le da importancia, se usa var, ejemplo:
+var numero = 100;
+print(numero.runtimeType);
+*Para manejar numeros en hexadecimal: int nHexa 1 =0xF;
+import ''; -> importar librerias
+
+La variable que declara el tipo de variable es la instancia
+Constructor: Son la forma en la que una instancia se inicializa
+
+------------------------------------------------------------------
+Dart:
+// Es de tipado estático
+// Tipado explicito – creo (no sé) es que las variables es como tipado estático.
+//Declaración de Constante con tipo explícito.
+//Tiempo de compilación 'const'.
+//Tiempo de ejecución 'final', 'runtime'.
+.isEven //Muestra si es par
+IsOdd ////Muestra si es impar
+isNegative //Creo que devuelve true or false si algo es o no negativo.
+print(b.floor()); //Muestra piso-Redondea hasta abajo
+print(b.ceil()); //Muestra cielo -Redondea hasta arriba
+print(b.round()); //Redondea dependiendo del decimal, arriba o abajo
+print(b.truncate()); //Trunca los decimales
+print(b.isNaN); //Mustra si no es numero con false or true
+
+--------------------------------------------------------------------
+Orientado a objetos:
+Paradigma de dart, orientado a objetos.
+UML = unified modeling language = la tabla donde va:
+-Nombre –Clase-
+-Características -Propiedades- = variables
+-Métodos = funciones
+Behavors = comportamiento = métodos = Lo que hace el objeto.
+Instancia = copia de la clase = int n = instancia de ‘int’ en ‘n’.
+Siempre se impime lo que hay dentro de un constructor.
+Las 3 / ayuda en el código para remarcarte un mensaje de ¿ayuda? A la hora de entender que es lo 
+que estás usando.
+La _ en una variable como _marca es para privar la variable.
+--------------------------------------------------------------------
+//Declaración con var 'Interferencia de tipo'
+ var numero =100;
+ var numero1 =9.81;
+ var nombre = "Diego";
+ print(numero.runtimeType);
+ print(numero1.runtimeType);
+ print(nombre.runtimeType);
+ 
+ var resultado;
+ resultado= numero + numero1;
+--------------------------------------------------------------------
+//Concatenación de Cadenas.
+ String nombreCurso = "Programacion Funcional";
+ String carrera = "ICI";
+ print(carrera + "" + nombreCurso);
+--------------------------------------------------------------------
+ //Interpolación de Cadenas.
+ print("$carrera $nombreCurso");
+ //Operaciones,llamar funciones etc '{}'.
+ String getCarrera(){
+ return "ICI";
+ }
+ print("${getCarrera()} ${nombreCurso}");
+ var nume = 4;
+ print("El cuadrado de $nume es ${nume * nume}");
+ 
+//Por ser final no va a cambiar.
+---------------------------------------------------------------------
+//Listas
+ final calificaciones = [];//Vacía.
+ final calificaciones1 = [10,6,9,8,10,8];
+ print(calificaciones1);
+ //Los elementos de las listas deben
+ //ser del mismo tipo.
+ calificaciones1.add(2);
+ print(calificaciones1);
+ for (var i=0; i<calificaciones1.length; i++){
+ print(calificaciones1[i]);
+ }
+ 
+ //Condicionales
+ int n8 = 5, n9 = 3;
+ if (n8 >n9){
+ print("$n8 > $n9");
+ } else if (n8 == n9){
+ print("$n8 = $n9");
+ } else {
+ print("$n8 < $n9");
+ }
+ 
+ 
+ //Operador Ternario
+ int n7 = 9, n6= 4;
+ int mayor;
+ 
+ if (n7 > n6){
+ mayor = n7;
+ } else {
+ mayor = n6;
+ }
+ print("El mayor es $mayor");
+------------------------------------------------
+ //Declarativo 'Funcional'
+ menor =n10 < n11 ? n10 : n11;
+ print("El Menor es: $menor");
+ //Sentencia Switch case
+switch (dia){
+ case "Lunes":
+ print("Hoy es lunes");
+ break;
+ case "Martes":
+ print("Hoy es Martes");
+ break;
+ default:
+ print("Dia no conocido");
+ }
+-----------------------------------------------
+//Ciclos
+ for (var i=1; i<=5; i++){
+ print("$i");
+ }
+ var n = ["1","2",3.1416,true,5];
+ for (var e in n){
+ print("$e");
+ }
+ n.forEach((e){
+ print("$e");
+ })
